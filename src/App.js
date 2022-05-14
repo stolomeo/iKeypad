@@ -4,6 +4,7 @@ import { useState } from "react";
 
 function App() {
   const [screenText, setScreenText] = useState("");
+  const [isAccessGranted, setisAccessGranted] = useState("Enter Passcode");
 
   const keypadButtons = [
     "1",
@@ -23,11 +24,11 @@ function App() {
     if (e.target.textContent === "<-") {
       setScreenText((oldText) => oldText.slice(0, -1));
     } else if (e.target.textContent === "√" && screenText !== "1024") {
-      console.log("access denidd");
+      setisAccessGranted("Access Denied");
     } else if (e.target.textContent === "√" && screenText === "1024") {
-      console.log("Access Granted");
+      setisAccessGranted("Access Granted");
     } else {
-      console.log("Enter Passcode");
+      setisAccessGranted("Enter Passcode");
       setScreenText((oldText) => (oldText += e.target.textContent));
     }
   };
@@ -36,10 +37,11 @@ function App() {
   });
   return (
     <div className="keypad-container">
+      <h1 className="accessText">{isAccessGranted}</h1>
       <div className="keypad-screen">
         <div className="keypad-text">{screenText}</div>
       </div>
-      <div className="keypad-grid">{keypadElements}</div>{" "}
+      <div className="keypad-grid">{keypadElements}</div>
     </div>
   );
 }
