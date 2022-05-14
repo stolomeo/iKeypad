@@ -1,4 +1,5 @@
 import "./App.css";
+import Keypad from "./Keypad";
 
 function App() {
   const keypadButtons = [
@@ -15,10 +16,13 @@ function App() {
     "0",
     "√",
   ];
+  const keypadElements = keypadButtons.map((btn) => {
+    return <Keypad value={btn} />;
+  });
   return (
     <div className="keypad-container">
       <div className="keypad-screen"></div>
-      <div className="keypad-grid"></div>
+      <div className="keypad-grid">{keypadElements}</div>{" "}
     </div>
   );
 }
