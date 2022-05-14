@@ -1,7 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+.title {
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 70px;
+  font-family: "Roboto Slab", serif;
+}
 .accessText {
-  margin: 3rem 0rem;
+  margin: 4rem 0rem 1rem 0rem;
   text-align: center;
   color: white;
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
 }
 .keypad-container {
   display: flex;
@@ -37,4 +48,5 @@
 }
 .keypad-btn:hover {
   background-color: hsla(0, 0%, 100%, 0.828);
+  cursor: pointer;
 }

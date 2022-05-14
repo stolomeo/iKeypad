@@ -1,6 +1,7 @@
 import "./App.css";
 import Keypad from "./Keypad";
 import { useState } from "react";
+import { nanoid } from "nanoid";
 
 function App() {
   const [screenText, setScreenText] = useState("");
@@ -33,13 +34,14 @@ function App() {
   };
 
   const keypadElements = keypadButtons.map((btn) => {
-    return <Keypad value={btn} handleClick={handleClick} />;
+    return <Keypad value={btn} handleClick={handleClick} key={nanoid()} />;
   });
 
   return (
     <>
+      <h1 className="title">Keypad</h1>
       <div className="keypad-container">
-        <h1 className="accessText">{isAccessGranted}</h1>
+        <h2 className="accessText">{isAccessGranted}</h2>
         <div className="keypad-screen">
           <div className="keypad-text">{screenText}</div>
         </div>
