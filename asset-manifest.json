@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-keypad/static/css/main.c219ea24.css",
+    "main.js": "/react-keypad/static/js/main.61cf33cd.js",
+    "index.html": "/react-keypad/index.html",
+    "main.c219ea24.css.map": "/react-keypad/static/css/main.c219ea24.css.map",
+    "main.61cf33cd.js.map": "/react-keypad/static/js/main.61cf33cd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c219ea24.css",
+    "static/js/main.61cf33cd.js"
+  ]
+}
