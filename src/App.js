@@ -22,6 +22,7 @@ function App() {
   ];
   const handleClick = (e) => {
     if (e.target.textContent === "⬅️") {
+      setisAccessGranted("Enter Passcode");
       setScreenText((oldText) => oldText.slice(0, -3));
     } else if (e.target.textContent === "✅" && screenText !== "1️⃣0️⃣2️⃣4️⃣") {
       setisAccessGranted("Access Denied");
