@@ -1,3 +1,9 @@
+## A simple keypad built using React
+
+## [Live Demo](https://react-keypad.web.app/)
+
+## Try guessing the passcode without cheating 😉
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
