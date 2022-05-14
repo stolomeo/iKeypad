@@ -39,7 +39,7 @@ function App() {
 
   return (
     <>
-      <h1 className="title">Keypad</h1>
+      <h1 className="title">iKeypad</h1>
       <div className="keypad-container">
         <h2 className="accessText">{isAccessGranted}</h2>
         <div className="keypad-screen">
