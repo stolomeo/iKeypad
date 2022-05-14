@@ -35,3 +35,7 @@
   font-size: 50px;
   background-color: white;
 }
+.keypad-btn:hover {
+  background-color: hsla(0, 0%, 100%, 0.81);
+  cursor: pointer;
+}
