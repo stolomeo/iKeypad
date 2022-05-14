@@ -1,16 +1,30 @@
 .accessText {
   margin: 3rem 0rem;
+  text-align: center;
+  color: white;
 }
 .keypad-container {
   display: flex;
   flex-direction: column;
+  width: 300px;
+  padding: 1rem;
+  gap: 1rem;
 }
 .keypad-screen {
   border: 1px solid;
+  border-radius: 5px;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  overflow: hidden;
+  flex-wrap: wrap;
+  max-width: 300px;
+  background-color: white;
+  padding: 0rem 1rem;
+}
+.keypad-text {
+  font-size: 40px;
 }
 .keypad-grid {
   display: grid;
@@ -19,4 +33,5 @@
 .keypad-btn {
   width: 100%;
   font-size: 50px;
+  background-color: white;
 }
