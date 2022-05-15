@@ -4,8 +4,6 @@ Try guessing the passcode without cheating 😉
 
 [Live Demo](https://react-keypad.web.app/)
 
-Try guessing the passcode without cheating 😉
-
 ## Getting started
 
 ```
