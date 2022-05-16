@@ -2,24 +2,12 @@ import "./App.css";
 import Keypad from "./Keypad";
 import { useState } from "react";
 import { nanoid } from "nanoid";
+import { keypadButtons } from "./Utils/Utils";
 
 function App() {
   const [screenText, setScreenText] = useState("");
   const [isAccessGranted, setisAccessGranted] = useState("Enter Passcode");
-  const keypadButtons = [
-    "1️⃣",
-    "2️⃣",
-    "3️⃣",
-    "4️⃣",
-    "5️⃣",
-    "6️⃣",
-    "7️⃣",
-    "8️⃣",
-    "9️⃣",
-    "⬅️",
-    "0️⃣",
-    "✅",
-  ];
+
   const handleClick = (e) => {
     if (e.target.textContent === "⬅️") {
       setisAccessGranted("Enter Passcode");
