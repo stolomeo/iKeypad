@@ -15,6 +15,7 @@ npm start
 
 ## Built with
 
+- [TypeScript](https://www.typescriptlang.org/)
 - [React](https://reactjs.org/)
 - [styled-components](https://www.npmjs.com/package/styled-components)
 - [nanoid](https://www.npmjs.com/package/nanoid)
