@@ -6,22 +6,24 @@ import KeypadScreen from "./Keypad/KeypadScreen";
 import KeypadGrid from "./Keypad/KeypadGrid";
 import KeypadAccessText from "./Keypad/KeypadAccessText";
 import styled from "styled-components";
+import { MouseEvent } from "react";
 
 export default function Main() {
   const [screenText, setScreenText] = useState<string>("");
   const [accessText, setAccessText] = useState<string>("Enter Passcode");
 
-  const handleClick = (e: { target: { textContent: string } }) => {
-    if (e.target.textContent === "⬅️") {
+  const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
+    const { textContent } = e.target as HTMLElement;
+    if (textContent === "⬅️") {
       setAccessText("Enter Passcode");
       setScreenText((oldText) => oldText.slice(0, -3));
-    } else if (e.target.textContent === "✅" && screenText !== "1️⃣0️⃣2️⃣4️⃣") {
+    } else if (textContent === "✅" && screenText !== "1️⃣0️⃣2️⃣4️⃣") {
       setAccessText("Access Denied");
-    } else if (e.target.textContent === "✅" && screenText === "1️⃣0️⃣2️⃣4️⃣") {
+    } else if (textContent === "✅" && screenText === "1️⃣0️⃣2️⃣4️⃣") {
       setAccessText("Access Granted");
     } else {
       setAccessText("Enter Passcode");
-      setScreenText((oldText) => (oldText += e.target.textContent));
+      setScreenText((oldText) => (oldText += textContent));
     }
   };
 

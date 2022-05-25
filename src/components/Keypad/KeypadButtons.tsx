@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { MouseEvent } from "react";
+
 type Props = {
   id: string;
-  handleClick: (event: MouseEvent<HTMLElement>) => void;
+  handleClick: (event: MouseEvent<HTMLButtonElement>) => void;
   value: string;
 };
 
