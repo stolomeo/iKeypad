@@ -32,14 +32,13 @@ export default function Main() {
       <KeypadButtons value={btn} handleClick={handleClick} id={nanoid()} />
     );
   });
-  console.log(keypadElements);
 
   return (
     <>
       <MainWrapper>
         <KeypadAccessText accessText={accessText} />
         <KeypadScreen screenText={screenText}></KeypadScreen>
-        <KeypadGrid id={keypadElements.id} keypadElements={keypadElements} />
+        <KeypadGrid keypadElements={keypadElements} />
       </MainWrapper>
     </>
   );

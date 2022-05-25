@@ -2,11 +2,10 @@ import styled from "styled-components";
 
 type Props = {
   keypadElements: JSX.Element[];
-  id: string;
 };
 
-export default function KeypadGrid({ keypadElements, id }: Props) {
-  return <GridWrapper key={id}>{keypadElements}</GridWrapper>;
+export default function KeypadGrid({ keypadElements }: Props) {
+  return <GridWrapper>{keypadElements}</GridWrapper>;
 }
 
 const GridWrapper = styled.div`
