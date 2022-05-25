@@ -3,7 +3,6 @@ import { useState } from "react";
 import { nanoid } from "nanoid";
 import { keypadButtons } from "./Utils/utils";
 import KeypadScreen from "./Keypad/KeypadScreen";
-import KeypadGrid from "./Keypad/KeypadGrid";
 import KeypadAccessText from "./Keypad/KeypadAccessText";
 import styled from "styled-components";
 import { MouseEvent } from "react";
@@ -29,18 +28,16 @@ export default function Main() {
 
   const keypadElements = keypadButtons.map((btn) => {
     return (
-      <KeypadButtons value={btn} handleClick={handleClick} id={nanoid()} />
+      <KeypadButtons value={btn} handleClick={handleClick} key={nanoid()} />
     );
   });
 
   return (
-    <>
-      <MainWrapper>
-        <KeypadAccessText accessText={accessText} />
-        <KeypadScreen screenText={screenText}></KeypadScreen>
-        <KeypadGrid keypadElements={keypadElements} />
-      </MainWrapper>
-    </>
+    <MainWrapper>
+      <KeypadAccessText accessText={accessText} />
+      <KeypadScreen screenText={screenText}></KeypadScreen>
+      <KeypadGrid>{keypadElements}</KeypadGrid>
+    </MainWrapper>
   );
 }
 
@@ -50,4 +47,9 @@ const MainWrapper = styled.main`
   width: 300px;
   padding: 1rem;
   gap: 1rem;
+`;
+
+const KeypadGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 `;

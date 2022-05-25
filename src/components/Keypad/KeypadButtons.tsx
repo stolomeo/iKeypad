@@ -2,17 +2,12 @@ import styled from "styled-components";
 import { MouseEvent } from "react";
 
 type Props = {
-  id: string;
   handleClick: (event: MouseEvent<HTMLButtonElement>) => void;
   value: string;
 };
 
-export default function KeypadButtons({ id, handleClick, value }: Props) {
-  return (
-    <Button key={id} onClick={(e) => handleClick(e)}>
-      {value}
-    </Button>
-  );
+export default function KeypadButtons({ handleClick, value }: Props) {
+  return <Button onClick={(e) => handleClick(e)}>{value}</Button>;
 }
 
 const Button = styled.button`
