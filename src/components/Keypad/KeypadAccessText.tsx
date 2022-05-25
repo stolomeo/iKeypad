@@ -1,8 +1,11 @@
-import React from "react";
 import styled from "styled-components";
 
-export default function AccessText({ isAccessGranted }) {
-  return <Text>{isAccessGranted}</Text>;
+type Props = {
+  accessText: string;
+};
+
+export default function KeypadAccessText({ accessText }: Props) {
+  return <Text>{accessText}</Text>;
 }
 
 const Text = styled.h2`

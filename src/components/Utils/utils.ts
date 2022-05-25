@@ -1,4 +1,4 @@
-export const keypadButtons = [
+export const keypadButtons: string[] = [
   "1️⃣",
   "2️⃣",
   "3️⃣",

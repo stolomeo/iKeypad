@@ -1,7 +1,10 @@
-import React from "react";
 import styled from "styled-components";
 
-export default function KeypadScreen({ screenText }) {
+type Props = {
+  screenText: string;
+};
+
+export default function KeypadScreen({ screenText }: Props) {
   return (
     <ScreenWrapper>
       <KeypadText>{screenText}</KeypadText>

@@ -1,7 +1,10 @@
-import React from "react";
 import styled from "styled-components";
 
-export default function KeypadGrid({ keypadElements }) {
+type Props = {
+  keypadElements:
+};
+
+export default function KeypadGrid({ keypadElements }: Props) {
   return <GridWrapper key={keypadElements.id}>{keypadElements}</GridWrapper>;
 }
 

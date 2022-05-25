@@ -1,27 +1,26 @@
-import React from "react";
 import KeypadButtons from "./Keypad/KeypadButtons";
 import { useState } from "react";
 import { nanoid } from "nanoid";
 import { keypadButtons } from "./Utils/utils";
 import KeypadScreen from "./Keypad/KeypadScreen";
 import KeypadGrid from "./Keypad/KeypadGrid";
-import AccessText from "./Keypad/AccessText";
+import KeypadAccessText from "./Keypad/KeypadAccessText";
 import styled from "styled-components";
 
 export default function Main() {
-  const [screenText, setScreenText] = useState("");
-  const [isAccessGranted, setisAccessGranted] = useState("Enter Passcode");
+  const [screenText, setScreenText] = useState<string>("");
+  const [accessText, setAccessText] = useState<string>("Enter Passcode");
 
-  const handleClick = (e) => {
+  const handleClick = (e: { target: { textContent: string } }) => {
     if (e.target.textContent === "⬅️") {
-      setisAccessGranted("Enter Passcode");
+      setAccessText("Enter Passcode");
       setScreenText((oldText) => oldText.slice(0, -3));
     } else if (e.target.textContent === "✅" && screenText !== "1️⃣0️⃣2️⃣4️⃣") {
-      setisAccessGranted("Access Denied");
+      setAccessText("Access Denied");
     } else if (e.target.textContent === "✅" && screenText === "1️⃣0️⃣2️⃣4️⃣") {
-      setisAccessGranted("Access Granted");
+      setAccessText("Access Granted");
     } else {
-      setisAccessGranted("Enter Passcode");
+      setAccessText("Enter Passcode");
       setScreenText((oldText) => (oldText += e.target.textContent));
     }
   };
@@ -35,7 +34,7 @@ export default function Main() {
   return (
     <>
       <MainWrapper>
-        <AccessText isAccessGranted={isAccessGranted} />
+        <KeypadAccessText accessText={accessText} />
         <KeypadScreen screenText={screenText}></KeypadScreen>
         <KeypadGrid keypadElements={keypadElements} />
       </MainWrapper>
