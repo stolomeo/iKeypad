@@ -1,4 +1,4 @@
-# iKeypad
+# keypad
 
 Try guessing the passcode without cheating 😉
 
@@ -7,8 +7,8 @@ Try guessing the passcode without cheating 😉
 ## Getting started
 
 ```
-git clone https://github.com/stolomeo/iKeypad.git
-cd iKeypad
+git clone https://github.com/stolomeo/keypad.git
+cd keypad
 npm install
 npm start
 ```
